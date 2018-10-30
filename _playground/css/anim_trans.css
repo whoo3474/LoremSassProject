@@ -39,5 +39,9 @@
           animation-duration: 5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 /*# sourceMappingURL=anim_trans.css.map */
