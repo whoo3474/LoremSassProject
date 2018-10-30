@@ -1,0 +1,29 @@
+.btn {
+  font-size : 30px;
+  text-decoration:none;
+  opacity:1;
+  transition: font-size 5s, opacity 10s;
+
+  &:hover{
+    font-size:50px;
+    text-decoration:underline;
+    opacity:0.2;
+  }
+}
+
+//animation
+@keyframes anim1{
+  0%{
+    opacity:.2;
+    transform: translate(50px,-50px); //translate 는 이동
+  }
+  100%{
+
+  }
+}
+
+#box1{
+  animation-name : anim1;
+  animation-duration :5s;
+  animation-fill-mode: forwards; //애니메이션이 끝나고 마지막상태로 유지
+}
