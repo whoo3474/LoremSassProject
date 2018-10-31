@@ -1,0 +1,30 @@
+.nav {
+  &-checkbox{
+    display: none;
+  }
+  &-button{
+    background-color: #c4e3ff;
+    width:7rem;
+    height : 6rem;
+    position:fixed;
+    top:7rem;
+    right: 8rem;
+    z-index: 2000;
+  }
+
+  &-bg{
+    background-color: #f00;
+    width:7rem;
+    height : 6rem;
+    position:fixed;
+    top:7rem;
+    right: 8rem;
+    z-index: 1000;
+
+    transition: all 1s;
+  }
+
+  &-checkbox:checked ~ &-bg{
+    transform : scale(80);
+  }
+}

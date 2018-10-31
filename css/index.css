@@ -139,6 +139,37 @@ h3 {
   border-bottom: none;
 }
 
+.nav-checkbox {
+  display: none;
+}
+
+.nav-button {
+  background-color: #c4e3ff;
+  width: 7rem;
+  height: 6rem;
+  position: fixed;
+  top: 7rem;
+  right: 8rem;
+  z-index: 2000;
+}
+
+.nav-bg {
+  background-color: #f00;
+  width: 7rem;
+  height: 6rem;
+  position: fixed;
+  top: 7rem;
+  right: 8rem;
+  z-index: 1000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.nav-checkbox:checked ~ .nav-bg {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+
 header {
   width: 100%;
   height: 90vh;
