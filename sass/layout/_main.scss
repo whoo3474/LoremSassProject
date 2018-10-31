@@ -1,11 +1,16 @@
 main{
+  @include clearfix();
   #section-about{
     background-color: #ededed;
     padding: 7rem 0 6.5rem 6rem;
+    min-height:42rem; //최소 높이가 42rem. 그이상으로 늘어날수있음.
+    width:66.66666%;
+    float:left;
 
     @include clearfix();
     &-words{
       width:65%;
+      padding: 2rem 2rem 0 0;
       float:left;
       p{
         padding:1.5rem 0;
@@ -50,6 +55,43 @@ main{
   }
 
   #section-etc{
+    width:33.33334%;
+    float:left;
+    [id^="etc-"] {
+      height: 14rem;
+    }
+    .etc{
+      &:nth-child(1){
+        background-color: $color-blue-1;
+      }
+      &:nth-child(2){
+        background-color: $color-blue-2;
+      }
+      &:nth-child(3){
+        background-color: $color-blue-3;
+      }
 
+      .etc-icon{
+        padding-top:3.5rem;
+        width:30%;
+        text-align:center;
+        float:left;
+        i{
+          font-size:6rem;
+        }
+      }
+      .etc-text{
+        padding-top:1rem;
+        width:70%;
+        float:left;
+
+        p{
+          margin:0.5rem 0;
+          padding-right:3.5rem;
+          text-align:justify;
+          font-size:1.4rem;
+        }
+      }
+    }
   }
 }
