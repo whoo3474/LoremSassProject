@@ -1,0 +1,43 @@
+#box {
+  background-color: #00f;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+}
+
+#box::before {
+  display: block;
+  content: "before";
+  background-color: #ff0;
+}
+
+#box::after {
+  display: block;
+  content: "after";
+  background-color: #ff0;
+}
+
+.box-parent {
+  margin: 20px;
+  padding: 20px;
+  background-color: #00f;
+}
+
+.box-parent .box-child {
+  width: 200px;
+  height: 200px;
+  background-color: #f00;
+  border: 1px solid #ff0;
+  float: left;
+}
+
+.box-parent .box-child:not(:last-child) {
+  margin-right: 30px;
+}
+
+.box-parent::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+/*# sourceMappingURL=pseudo.css.map */
