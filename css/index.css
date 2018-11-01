@@ -151,23 +151,81 @@ h3 {
   top: 7rem;
   right: 8rem;
   z-index: 2000;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .nav-bg {
-  background-color: #f00;
+  background-image: radial-gradient(#285a91, #1f9cfd);
   width: 7rem;
   height: 6rem;
   position: fixed;
   top: 7rem;
   right: 8rem;
   z-index: 1000;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  border-radius: 2px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .nav-checkbox:checked ~ .nav-bg {
   -webkit-transform: scale(80);
           transform: scale(80);
+}
+
+.nav-icon {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.nav-icon::before {
+  top: -0.8rem;
+}
+
+.nav-icon::after {
+  top: 0.8rem;
+}
+
+.nav-icon::before, .nav-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.nav-icon, .nav-icon::before, .nav-icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+}
+
+.nav-button:hover .nav-icon::before {
+  top: -1rem;
+}
+
+.nav-button:hover .nav-icon::after {
+  top: 1rem;
+}
+
+.nav-checkbox:checked ~ .nav-button .nav-icon {
+  background-color: transparent;
+}
+
+.nav-checkbox:checked ~ .nav-button .nav-icon:before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.nav-checkbox:checked ~ .nav-button .nav-icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 header {
